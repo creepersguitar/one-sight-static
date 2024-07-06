@@ -53,6 +53,20 @@ main {
     border-radius: 8px;
 }
 
+button#hi {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button#hi:hover {
+    background-color: #218838;
+}
 .container {
     max-width: 800px;
     margin: 0 auto; /* Center align within the viewport */
