@@ -28,7 +28,8 @@ main {
 /* Hero section styles */
 .hero {
     height: 100vh; /* Full viewport height */
-    background-image: url('../images/background-sunset.jpg'); /* Check the path */
+    background-image: url('../images/background-sunset.jpg');
+    background-color: #f0f0f0; /* Fallback background color */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -36,6 +37,14 @@ main {
     align-items: center;
     text-align: center;
     color: #fff;
+}
+
+.hero::after {
+    content: 'Image failed to load'; /* Fallback text */
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .hero-text {
