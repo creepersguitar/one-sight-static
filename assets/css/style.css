@@ -87,17 +87,6 @@ button#hi:hover {
     background-color: #218838;
 }
 
-/* Paragraph styles */
-#nice-paragraph {
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 20px; /* Add space between button and paragraph */
-}
-
 /* Container styles */
 .container {
     max-width: 800px;
@@ -114,4 +103,19 @@ h1 {
 p {
     font-size: 1.2rem;
     color: #eee;
+}
+/* Media Query for 280px width */
+@media only screen and (max-width: 280px) {
+    main {
+        padding: 10px;
+    }
+
+    #hero-text {
+        padding: 10px;
+    }
+
+    button#hi {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
