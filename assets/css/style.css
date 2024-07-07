@@ -10,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
+    height: 100vh;
 }
 
 /* Header and Footer styles */
@@ -21,37 +22,55 @@ header, footer {
 
 /* Main styles */
 main {
+    height: calc(100vh - 40px); /* Adjust based on header/footer height */
     padding: 20px;
-    color: aliceblue;
+    color: #000; /* Changed from aliceblue to black for visibility */
 }
 
 /* Hero section styles */
 #hero {
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    position: relative; /* Ensure relative positioning for ::after pseudo-element */
+    position: relative;
+    height: 100%;
+    background-color: #f0f0f0; /* Fallback background color */
 }
 
-#hero img {
+#hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area */
+    object-fit: cover; /* Ensures the image covers the area */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Send the image behind the ::after pseudo-element */
+    z-index: -1; /* Places the image behind the text */
 }
 
-#hero-text {
+#fallback-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     padding: 20px;
     border-radius: 8px;
+    color: #fff; /* Ensure text color is white for visibility */
+    z-index: 0;
 }
 
+#hero-text {
+    position: relative;
+    z-index: 1; /* Places text above the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff; /* Ensure text color is white for visibility */
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Button styles */
 button#hi {
     background-color: #28a745;
     color: #fff;
@@ -61,22 +80,37 @@ button#hi {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add space between button and paragraph */
 }
 
 button#hi:hover {
     background-color: #218838;
 }
 
+/* Paragraph styles */
+#nice-paragraph {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px; /* Add space between button and paragraph */
+}
+
+/* Container styles */
 .container {
     max-width: 800px;
     margin: 0 auto; /* Center align within the viewport */
 }
 
+/* Heading styles */
 h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
+/* Paragraph styles */
 p {
     font-size: 1.2rem;
     color: #eee;
