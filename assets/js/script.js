@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const button = document.getElementById('hi');
+    const button1 = document.getElementById('hi');
     const heroText = document.getElementById('hero-text');
 
-    button.addEventListener('click', function() {
+    button1.addEventListener('click', function() {
         const paragraph = document.createElement('p');
         paragraph.id = 'nice-paragraph';
         paragraph.innerHTML =
