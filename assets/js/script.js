@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const heroText = document.getElementById('hero-text');
 
     button1.addEventListener('click', function() {
+        button1.style.display = "none"
         const paragraph = document.createElement('p');
         paragraph.id = 'nice-paragraph';
         paragraph.innerHTML =
