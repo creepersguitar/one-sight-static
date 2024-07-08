@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const paragraph = document.createElement('p');
         paragraph.id = 'nice-paragraph';
         paragraph.innerHTML =
-        "This is a nice paragraph that appears when you click the button!";
+        `Hi,
+        Thanks for the opportunity for the second interview,
+        I hope i got the job :)
+        Thank you both Tom and Adrian for your time.`;
         heroText.appendChild(paragraph);
     });
 });
